@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pong!</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <canvas id="gameCanvas"></canvas>
+
+    <!--
+      Sounds from Free Sounds:
+      Impact Sound: http://freesound.org/people/mickmon/sounds/176833/
+      Coin Sound: http://freesound.org/people/ProjectsU012/sounds/341695/
+    -->
+    <audio id="impact" src="assets/bop.wav"></audio>
+    <audio id="score" src="assets/score.wav"></audio>
+
+
+    <div class="overlay">
+      <div class="overlay-title">
+        <h1 class="overlay-message">Pong Clone!</h1>
+      </div>
+      <div class="overlay-options">
+        <button id="local-multiplayer">Local Multiplayer</button>
+        <button id="ai-game">Player vs Computer</button>
+      </div>
+    </div>
+
+    <script src="js/Actors/Actor.js"></script>
+    <script src="js/Actors/HumanActor.js"></script>
+    <script src="js/Actors/AIActor.js"></script>
+    <script src="js/Actors/NonHumanActor.js"></script>
+    <script src="js/Actors/ActorFactory.js"></script>
+    <script src="js/Controllers/Keyboard.js"></script>
+    <script src="js/Sprites/Sprite.js"></script>
+    <script src="js/GameWorld.js"></script>
+    <script src="js/Utils.js"></script>
+    <script src="js/Label.js"></script>
+    <script src="js/Sprites/Paddle.js"></script>
+    <script src="js/Sprites/Ball.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/Main.js"></script>
+  </body>
+</html>
