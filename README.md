@@ -1,7 +1,8 @@
 # Pong Clone!
 
-## Play it live
-[Pong Clone](http://christianwood.net/labs/pong/)
+## Play Pong Clone
+[Play Pong Clone](http://christianwood.net/labs/pong/)
+
 Use the WASD keys for movement against the AI.
 In multiplayer, Player 2 uses the arrow keys.
 
