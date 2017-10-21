@@ -12,8 +12,9 @@ In the process of writing a framework for HTML canvas animations, I
 realized I could use the same architecture to create a game. Thus, Pong Clone.
 
 ## Architecture
-This diagram illustrates the basic relationships between classes in the game:
-![Screenshot of Diagram](https://raw.githubusercontent.com/cwood821/campground-finder/master/screenshots/camground-finder-1.png)
+This early diagram illustrates the basic relationships between classes in the game. Not all class data are represented here.
+
+![Screenshot of Diagram](https://raw.githubusercontent.com/cwood821/pong-clone/master/assets/model-v4.png)
 
 
 ## Credit
