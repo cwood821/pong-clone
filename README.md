@@ -6,6 +6,8 @@
 For an AI game, use the WASD keys for movement.
 In local multiplayer, Player 1 uses the WASD keys, Player 2 the arrow keys.
 
+![Screenshot of Diagram](https://raw.githubusercontent.com/cwood821/pong-clone/master/assets/screenshot.png)
+
 ## Architecture
 This diagram illustrates the basic relationships between game classes. Not all class data are represented here.
 
@@ -20,4 +22,4 @@ The live game uses sounds from [Free Sound](http://freesound.org/) under Creativ
 - [Coins 1 by ProjectsU012](http://freesound.org/people/ProjectsU012/sounds/341695/)
 Although referenced, these are not included in the repository.
 
-The background space image is from [Kyle Devaras](https://unsplash.com/@kyledevaras) via Unsplash. 
+The background space image is from [Kyle Devaras](https://unsplash.com/@kyledevaras) via Unsplash.
