@@ -20,7 +20,6 @@ class Paddle extends Sprite {
     // Off bottom
     if ( (this.y + this.height) > this.ctx.canvas.height ) {
       this.y = this.ctx.canvas.height - this.height;
-      // this.vy = 0;
     }
   }
 

@@ -15,7 +15,6 @@ function isBetween(obj1, obj2) {
 }
 
 function overlap(obj1, obj2) {
-
   const lessThanObj1Y = (obj2.y + obj2.height) > obj1.y;
   const lessThanObj1Height = obj2.y < (obj1.y + obj1.height);
   const lessThanObj1X = (obj2.x + obj2.width) > obj1.x;

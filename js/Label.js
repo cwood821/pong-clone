@@ -1,5 +1,3 @@
-
-
 class Label {
 
   constructor(args) {
@@ -41,6 +39,5 @@ class Label {
   update() {
     this.ctx.fillText("10", 50, 50);
   }
-
 
 }

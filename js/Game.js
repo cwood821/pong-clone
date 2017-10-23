@@ -1,5 +1,4 @@
 function play(gameType) {
-
   // Audio for sound effects
   const impactNoise = document.querySelector("#impact");
   const scoreNoise = document.querySelector("#score");
@@ -7,7 +6,7 @@ function play(gameType) {
   const ballVx = 10;
   const paddleHeight = 110;
 
-  // Create the gameWorld and start the animation cycle
+  // Create the GameWorld and start the animation cycle
   const gameWorld = new GameWorld("#gameCanvas", window.innerWidth, window.innerHeight, "2d", []);
   gameWorld.startAnimation();
 
@@ -33,14 +32,14 @@ function play(gameType) {
     }
   });
 
-  // Handle image loading for sprite
+  // Handle image loading for ball sprite
   ballImg.onload = () => {
     ballSprite.setImg(ballImg);
   };
 
   ballImg.src = "assets/ball.png";
 
-  // Create the ball actor for the gameworld
+  // Create the ball actor for the Game World
   const ball = new NonHumanActor({
     ctx: gameWorld.getCtx(),
     sprite: ballSprite
@@ -49,7 +48,7 @@ function play(gameType) {
   gameWorld.addActor(ball);
 
 
-  // Create sprites for the paddle
+  // Create sprites for the paddles
   const paddle1 = new Paddle({
     ctx: gameWorld.getCtx(),
     x: 20,
@@ -100,7 +99,7 @@ function play(gameType) {
   gameWorld.addActor(player2);
 
 
-  // Create Score labels for both players score
+  // Create Score labels for both player scores
   const p1ScoreText = new Label({
     ctx: gameWorld.getCtx(),
     x: Math.floor(gameWorld.getWidth() / 2) - 76,
@@ -129,20 +128,22 @@ function play(gameType) {
   function renderScore() {
     p2ScoreText.setTextContent(player2.getScore());
     p1ScoreText.setTextContent(player1.getScore());
-    // end the game if someone is greater than 10
+    // end the game if someone has a score greater than 10
     player2.getScore() >= 10 && endGame(player2);
     player1.getScore() >= 10 && endGame(player1);
   }
 
 
   function endGame(winnerPlayer) {
-    gameWorld.stopAnimation();
+    // Show overlay, print winner
     document.querySelector(".overlay-message").innerHTML = `
       ${winnerPlayer.getName()} wins!
     `;
     document.querySelector(".overlay").classList.add("show-overlay");
+    // Stop ball movement
     ball.sprite.setVx(0);
     ball.sprite.setVy(0);
+    // reset the score
     player1.score = 0;
     player2.score = 0;
     gameWorld.stopAnimation();

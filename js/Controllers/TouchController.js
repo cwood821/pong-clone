@@ -1,18 +1,32 @@
+/*
+  The TouchController class has not been implemented yet.
+  It currently duplicates the KeyboardController
+*/
+
 class TouchController {
 
   constructor(type) {
+    this.keysDown = {};
     this.type = type;
 
+    // arrays to represent allowable keys
+    this.arrowKeys = [38, 40];
+    this.wasdKeys = [83, 87];
+
     // Handle keypresses
-    window.addEventListener("touchstart", (event) => {
-        console.log(event);
+    window.addEventListener("keydown", (event) => {
+        this.keysDown[event.keyCode] = true;
+    });
+
+    window.addEventListener("keyup", (event) => {
+       delete this.keysDown[event.keyCode];
     });
 
   }
 
   onKeyDown(event) {
-    if ( event.touches && event.touches[0].clientX ) {
-      return true;
+    if (this.type == "arrows" && this.arrowKeys.includes(event.keyCode)) {
+      this.keysDown[event.keyCode] = true;
     }
 
     if (this.type == "wasd" && this.wasdKeys.includes(event.keyCode)) {

@@ -6,6 +6,7 @@ class AIActor extends Actor {
   }
 
   update() {
+    // a little randomness to add variety to decisions
     let diff = getRandomInt(0, 10);
     let ball = this.ball.sprite;
     let spriteCenter = this.sprite.y + this.sprite.height / 2;

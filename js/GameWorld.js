@@ -1,6 +1,3 @@
-// GameWorld class for JS Classes of Type Animatable:
-// i.e. a class that implements an update, draw, reset interface
-
 class GameWorld {
 
   constructor(domTarget, width, height, ctx, animatables) {

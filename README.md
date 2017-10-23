@@ -3,18 +3,15 @@
 ## Play Pong Clone
 [Play Pong Clone](http://christianwood.net/labs/pong/)
 
-Use the WASD keys for movement against the AI.
-In multiplayer, Player 2 uses the arrow keys.
-
-## Background
-
-In the process of writing a framework for HTML canvas animations, I
-realized I could use the same architecture to create a game. Thus, Pong Clone.
+For an AI game, use the WASD keys for movement.
+In local multiplayer, Player 1 uses the WASD keys, Player 2 the arrow keys.
 
 ## Architecture
-This early diagram illustrates the basic relationships between classes in the game. Not all class data are represented here.
+This diagram illustrates the basic relationships between game classes. Not all class data are represented here.
 
 ![Screenshot of Diagram](https://raw.githubusercontent.com/cwood821/pong-clone/master/assets/model-v4.png)
+
+In essence, the game world is composed of Actors. Actors have sprite representations in the world. The GameWorld class calls the update functionality of each actor added to the world on each animation frame and handles collisions between actors.
 
 
 ## Credit

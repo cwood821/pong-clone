@@ -76,28 +76,6 @@ class Sprite {
     this.vy = newVy;
   }
 
-  offCanvas() {
-    // Off right side of canvas
-    if ( this.x + this.buffer > (this.ctx.canvas.width - this.buffer) ) {
-
-    }
-
-    // Off the left side
-    if ( (this.x + this.width - this.buffer ) < this.buffer ) {
-
-    }
-
-    // Off top
-    if ( this.y < 0 ) {
-
-    }
-
-    // Off bottom
-    if ( (this.y + this.height) > this.ctx.canvas.height ) {
-
-    }
-  }
-
   update () {
     this.y += this.vy;
     this.x += this.vx;

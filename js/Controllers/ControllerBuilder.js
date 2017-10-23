@@ -1,13 +1,13 @@
-// depending on options, the appropriate ControllerBuilder
+// Depending on options, return the appropriate Controller
 // e.g. on touch devices, return a touch controller, etc
 
-class ControllerBuilder {
+/*
+  Required options object properties
+  - isTouch: boolean
+  - playerNum: integer
+*/
 
-  /*
-    Required options object properties
-    - isTouch: boolean
-    - playerNum: integer
-  */
+class ControllerBuilder {
   static build(options) {
     if (options.isTouch) {
       const touchScreenPortion = options.playerNum == 1 ? "left" : "right";

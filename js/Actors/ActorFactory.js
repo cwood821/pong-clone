@@ -12,7 +12,7 @@ class ActorFactory {
         });
       } else {
         return new HumanActor({
-          name: "Player 1",
+          name: "Player 2",
           ctx: options.ctx,
           score: 0,
           controller: new KeyboardController("arrows"),
@@ -22,7 +22,6 @@ class ActorFactory {
     }
 
     if (gameType == "ai") {
-
       if (playerNum == 1) {
         return new HumanActor({
           name: "Player 1",
