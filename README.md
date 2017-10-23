@@ -11,7 +11,7 @@ This diagram illustrates the basic relationships between game classes. Not all c
 
 ![Screenshot of Diagram](https://raw.githubusercontent.com/cwood821/pong-clone/master/assets/model-v4.png)
 
-In essence, the game world is composed of Actors. Actors have sprite representations in the world. The GameWorld class calls the update functionality of each actor added to the world on each animation frame and handles collisions between actors.
+In essence, the GameWorld is composed of Actors. Actors have sprite representations in the world. On each animation frame, the GameWorld class calls the update functionality of each Actor added to the world and handles collisions between actors.
 
 
 ## Credit
